@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>sSmoke-effect:JS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" type="image/ico" href="./favicon.ico">
+
+</head>
+<body>
+	<section>
+		<p class="text">
+			Lorem ipsum, dolor sit amet, consectetur adipisicing elit. Ratione officia, fugit voluptatibus facere, cum rem ad neque suscipit necessitatibus nesciunt exercitationem similique! Quasi sit, est repudiandae consequatur reprehenderit molestiae, cupiditate?
+			Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, nostrum fugit vel expedita autem eum natus saepe provident laborum dolore sunt consectetur similique dolorem, animi porro quo ut ab, nobis!
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur facere ducimus sapiente sequi nobis ut placeat, voluptatibus optio numquam at natus fugit nisi saepe consequatur veritatis. Quod, quos repellat non.
+		</p>
+	</section>
+
+
+
+<script>
+	//split
+	const text=document.querySelector('.text');
+	text.innerHTML=text.textContent.replace(/\S/g,"<span>$&</span>")
+
+	//add active on hover
+
+	const letters=document.querySelectorAll('span');
+	for(let i=0;i<letters.length;i++){
+		letters[i].addEventListener("mouseover",function(){
+			letters[i].classList.add('active');
+		})
+
+
+
+
+	}
+
+</script>
+</body>
+</html>
